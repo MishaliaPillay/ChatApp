@@ -1,0 +1,6 @@
+body{
+ 
+    background-size: cover;
+background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+    background-image: radial-gradient(18% 28% at 24% 50%, rgb(120, 142, 222) 7%, #073AFF00 100%),radial-gradient(70% 53% at 36% 76%, #D98FFE 0%, #073AFF00 100%),radial-gradient(42% 53% at 15% 94%, #E930E9FF 7%, #073AFF00 100%),radial-gradient(42% 53% at 34% 72%, #A837FB 7%, #073AFF00 100%),radial-gradient(35% 56% at 91% 74%, #2542c2f5 9%, #073AFF00 100%),radial-gradient(74% 86% at 67% 38%, #E476EDFF 25%, #073AFF00 100%),linear-gradient(125deg, rgb(0, 36, 242) 1%, #4C00FCFF 100%);
+}
