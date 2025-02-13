@@ -8,12 +8,14 @@ const urls=[
 
 const navbar=document.getElementById('navbar');
 
-
+const icon = document.createElement('i');
+icon.className='fa fa-user';
 
 urls.forEach(link=>{
-
     const anchortag=document.createElement('a');
     anchortag.href=link.url;
-    anchortag.textContent='namesoflinks ';
-    navbar.appendChild(anchortag)
+    anchortag.textContent = '';
+    navbar.appendChild(anchortag);
+    anchortag.prepend(icon);
+    navbar.appendChild(anchortag);
 })
