@@ -1,8 +1,8 @@
-.get-started-page-card {
+.profile-page-card {
   display: block;
   margin: auto;
-  width: 90%;
-  max-width: 600px;
+  width: 80%;
+  max-width: 500px;
   text-align: center;
   padding: 5vh 2vw;
   padding-bottom: 100px;
@@ -15,6 +15,7 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.542);
   border-radius: 10px;
+  padding-left: 80px;
 }
 .input-container {
   border-radius: 20px;
@@ -30,7 +31,65 @@
   letter-spacing: 1px;
   padding-left: 1em;
 }
-
+.submit-button {
+  background-color: #718eff;
+  border-radius: 25px;
+  padding: 0.2em;
+  width: 110%;
+  max-width: 700px;
+  margin: 5% 0;
+  font-size: 40px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  letter-spacing: 3px;
+  margin-bottom: 10%;
+}
+@media (max-width: 768px) {
+  .input-container {
+    width: 80%;
+    font-size: 1rem;
+    padding: 0.8em;
+  }
+  .profile-page-card {
+    width: 60%;
+    padding-left: 40px;
+    margin-top: 20%;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+  .submit-button {
+    width: 90%;
+    font-size: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .input-container {
+    width: 70%;
+    font-size: 0.5rem;
+    padding: 0.8em;
+  }
+  .profile-page-card {
+    width: 60%;
+    padding-left: 40px;
+    margin-top: 20%;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+  .submit-button {
+    width: 80%;
+    max-width: 500px;
+    margin: 5% 0;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(248, 248, 248);
+    letter-spacing: 3px;
+    margin-bottom: 10%;
+  }
+}
 /*This must be moved to gloabl styles later on*/
 .general-header {
   font-family: sans-serif;
@@ -48,24 +107,9 @@
   margin-bottom: 10%;
 }
 
-.submit-button {
-  background-color: #718eff;
-  border-radius: 25px;
-  padding: 0.2em;
-  width: 100%;
-  max-width: 400px;
-  margin: 5% 0;
-  font-size: 40px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  color: white;
-  letter-spacing: 3px;
-  margin-bottom: 10%;
-}
 body {
   overflow: hidden;
-  background-size: 100% 100%;
+  background-size: 110% 100%;
   background-repeat: no-repeat;
 
   background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px,

@@ -22,3 +22,20 @@
   background-color: #ddd;
   color: white;
 }
+@media (max-width: 768px) {
+  .navbar {
+    width: 80px;
+  }
+}
+@media (max-width: 480px) {
+  .navbar {
+    width: 60px;
+  }
+  .navbar a {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 30px;
+  }
+}
