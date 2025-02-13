@@ -1,3 +1,5 @@
+
+
 const urls=[
     {url:'profile-page.html',iconClass:'fa fa-user'},
     {url:'contacts-page.html',iconClass:'fa fa-address-book'},
@@ -7,8 +9,6 @@ const urls=[
 
 
 const navbar=document.getElementById('navbar');
-
-
 
 
 urls.forEach(link=>{
