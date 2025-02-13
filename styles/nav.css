@@ -3,9 +3,9 @@
   padding: 0;
   width: 100px;
   background-color: #6c90eb;
-  position: fixed;
-  height: 80%;
-  overflow: auto;
+  position: absolute;
+  height: 100%;
+
   border-radius: 5px;
   justify-items: center;
 }

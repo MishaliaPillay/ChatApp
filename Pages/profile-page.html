@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../styles/nav.css"> 
+    <link rel="stylesheet" type="text/css" href="../styles/Pages/profile-page.css"> 
     <title>Document</title>
+    
 </head>
 <body>
-    <header><h1>This is the profile page</h1></header> 
-</body>
+    <header></header> 
+
+    <section class="get-started-page-card">
+        <section class="navbar" id="navbar"></section>
+        <img src="../assets/images/UserIcon.png" alt="Default user Icon " class="icons"> 
+      
+        <p class="general-text">Your Details</p>
+        <form action="/submit" method="post">
+            <label for="email" name></label> 
+            <input  type="edit" id="username" class="input-container"  value="Mishalia Pillay" required><i class="fa fa-sign-out"></i>
+           
+            <br>
+            <label for="username"></label>
+            <input  type="email" id="email" class="input-container" value="mishalia.pillay@boxfusion.io" readonly >
+            <br>
+          
+            <button  class="submit-button"  type="submit"><i class="fa fa-sign-out"></i>Logout</button>
+        </form>
+            </section>
+</body><script src="../JS/nav.js"></script>
 </html>
