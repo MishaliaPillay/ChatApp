@@ -2,6 +2,6 @@ function pageRedirect() {
   var delay = 4000;
 
   setTimeout(function () {
-    window.location = "/Pages/get-started-page.html";
+    window.location = "/Pages/landing-page.html";
   }, delay);
 }
