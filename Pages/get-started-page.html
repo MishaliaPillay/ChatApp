@@ -1,29 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chatter</title>
-    <link rel="stylesheet" type="text/css" href="../styles/Pages/get-started-page.css"> 
-    <link rel="stylesheet" type="text/css" href="../styles/global.css"> 
-</head>
-<body>
-    <header></header> 
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../styles/Pages/get-started-page.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../styles/global.css" />
+  </head>
+  <body>
+    <header></header>
     <section class="get-started-page-card">
-        <h1 class="general-header">Get Started</h1>
-        <p class="general-text">Create your account</p>
-        <form action="/submit" method="post">
-            <label for="email"></label>
-            <input  type="email" id="email" class="input-container" placeholder="Email" name="email" required>
-            <br>
-            <label for="username"></label>
-            <input  type="text" id="username" class="input-container" placeholder="Username" name="username" required>
-            <br>
-            <label for="password"></label>
-            <input type="password" id="password" class="input-container" placeholder="Password" name="password" required>
-            <br>
-            <button  class="submit-button"  type="submit">Sign in</button>
-        </form>
-            </section>
-</body>
+      <h1 class="general-header">Get Started</h1>
+      <p class="general-text">Create your account</p>
+
+      <label for="email"></label>
+
+      <input
+        type="email"
+        id="email"
+        class="input-container"
+        placeholder="Email"
+        name="email"
+        required
+      />
+
+      <br />
+      <label for="username"></label>
+      <input
+        type="text"
+        id="username"
+        class="input-container"
+        placeholder="Username"
+        name="username"
+        required
+      />
+      <p id="feedback-isUnique"></p>
+      <br />
+      <label for="password"></label>
+      <input
+        type="password"
+        id="password"
+        class="input-container"
+        placeholder="Password"
+        name="password"
+        required
+      />
+      <br />
+      <button class="submit-button" onclick="signup()">Sign in</button>
+    </section>
+  </body>
+  <script src="../JS/sign-up.js"></script>
 </html>
