@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chatter</title>
-    <link rel="stylesheet" type="text/css" href="../styles/Pages/login-page.css"> 
-    <link rel="stylesheet" type="text/css" href="../styles/global.css"> 
-</head>
-<body>
-    <header></header> 
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../styles/Pages/login-page.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../styles/global.css" />
+  </head>
+  <body>
+    <header></header>
     <section class="login-page-card">
-<h1 class="general-header">Welcome back!</h1>
-<p class="general-text">Please enter your details below</p>
-<form action="/submit" method="post">
-    <label for="username"></label>
-    <input  type="text" id="username" class="input-container" placeholder="Username" name="username" required>
-    <br>
-    <label for="password"></label>
-    <input type="password" id="password" class="input-container" placeholder="Password" name="password" required>
-    <br>
-    <button  class="submit-button"  type="submit">Sign in</button>
-</form>
+      <h1 class="general-header">Welcome back!</h1>
+      <p class="general-text">Please enter your details below</p>
+      <article>
+        <label for="username"></label>
+        <input
+          type="text"
+          id="username"
+          class="input-container"
+          placeholder="Username"
+          name="username"
+          required
+        />
+        <p id="name-feedback"></p>
+        <br />
+        <label for="password"></label>
+        <input
+          type="password"
+          id="password"
+          class="input-container"
+          placeholder="Password"
+          name="password"
+          required
+        />
+        <br />
+        <p id="login-feedback"></p>
+
+        <button class="submit-button" onclick="login()">Sign in</button>
+      </article>
+      <a href="./get-started-page.html" class="sign-up">
+        <i class="fa fa-user-o"></i> Register an account</a
+      >
     </section>
-</body>
+    <script src="../JS/login.js"></script>
+  </body>
 </html>
