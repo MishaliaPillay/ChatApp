@@ -36,7 +36,7 @@ document.getElementById("password").addEventListener("input", function () {
 function addUserToChat(username) {
   let activeUsers = JSON.parse(localStorage.getItem("activeUsers")) || [];
 
-  if (!activeUsers.inculdes(username)) {
+  if (!activeUsers.includes(username)) {
     activeUsers.push(username);
     localStorage.setItem("activeUsers", JSON.stringify(activeUsers));
   }
