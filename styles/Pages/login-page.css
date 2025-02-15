@@ -5,7 +5,7 @@
   max-width: 600px;
   text-align: center;
   padding: 5vh 2vw;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -21,14 +21,19 @@
   padding: 0.5em 0.3em;
   width: 100%;
   max-width: 350px;
-  margin: 2% 0;
+  margin: 00;
   font-size: 20px;
   outline: none;
   border: 3px solid #9500f1;
   cursor: pointer;
 
   letter-spacing: 1px;
-  padding-left: 1em;
+}
+.sign-up {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bolder;
+  font-family: sans-serif;
 }
 
 /*This must be moved to gloabl styles later on*/
@@ -49,14 +54,14 @@
   padding: 0.2em;
   width: 100%;
   max-width: 400px;
-  margin: 5% 0;
+
   font-size: 40px;
   outline: none;
   border: none;
   cursor: pointer;
   color: white;
   letter-spacing: 3px;
-  margin-bottom: 10%;
+  margin-bottom: 8%;
 }
 body {
   overflow: hidden;
@@ -84,4 +89,44 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 768px) {
+  .input-container {
+    width: 80%;
+    font-size: 1rem;
+    padding: 0.8em;
+  }
+
+  .submit-button {
+    width: 90%;
+    font-size: 30px;
+  }
+  .sign-up {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bolder;
+    font-family: sans-serif;
+    position: static;
+  }
+}
+@media (max-width: 480px) {
+  .input-container {
+    width: 70%;
+    font-size: 0.5rem;
+    padding: 0.8em;
+  }
+
+  .submit-button {
+    width: 80%;
+    max-width: 500px;
+    margin: 5% 0;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(248, 248, 248);
+    letter-spacing: 3px;
+    margin-bottom: 10%;
+  }
 }
