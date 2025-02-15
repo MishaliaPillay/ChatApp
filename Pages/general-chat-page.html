@@ -3,9 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Chatter</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <header><h1>This is the general chat page</h1></header>
+    <section id="online-users">
+      <h2>Onine Users</h2>
+      <ul id="'users-list"></ul>
+    </section>
+    <section id="chat-box">
+      <article id="messages"></article>
+      <article id="typing"></article>
+      <input type="text" id="message-input" placeholder="Type something..." />
+      <button id="send-button">Send<i class="fa fa-send"></i></button>
+    </section>
   </body>
 </html>
