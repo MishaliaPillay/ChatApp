@@ -12,7 +12,7 @@ function loadMeesages() {
     const messageHTMLElement = ` <section class="message ${messageClass}">
       <article class="bubble">
         <strong>${messagetext.sender}</strong>${messagetext.text}
-        <span> (${messagetext.timestamp}) time</span>
+        <span> (${messagetext.timestamp})</span>
       </article>
     </section>`;
     messageContainer.innerHTML += messageHTMLElement;
@@ -32,7 +32,7 @@ function sendMessage() {
     text: inputMessage.value,
     timestamp: timestamp,
   };
-  console.log(newMessage);
+
   saveChatMessage(newMessage);
   inputMessage.value = "";
   loadMeesages();

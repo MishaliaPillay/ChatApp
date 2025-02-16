@@ -1,6 +1,6 @@
 let typingTimeout;
 
-function pingIndicator() {
+function sendTypingIndicator() {
   const currentUser = getCurrentUser();
   if (!currentUser) return;
 
@@ -12,10 +12,9 @@ function pingIndicator() {
   typingTimeout = setTimeout(() => {
     localStorage.setItem(
       "typing",
-      JSON.stringify({ user: currentUser, isTyping: false }),
-      2000
+      JSON.stringify({ user: currentUser, isTyping: false })
     );
-  });
+  }, 2000);
 }
 
 function handleStorageEvent(event) {
