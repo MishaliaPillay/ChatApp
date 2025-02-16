@@ -1,12 +1,15 @@
 function loadMeesages() {
   const messageContainer = document.getElementById("messages");
+  //clear the chat before loading new messages
   messageContainer.innerHTML = "";
 
   const messages = getChatMessage();
   const currentUser = getCurrentUser();
+  //if there is not user stop this function
   if (!currentUser) return;
 
   messages.forEach((messagetext) => {
+    //was the messagereceived or sent by the current user -apply appropriate styling
     const messageClass =
       messagetext.sender === currentUser ? "sent" : "received";
     const messageHTMLElement = ` <section class="message ${messageClass}">
@@ -16,7 +19,7 @@ function loadMeesages() {
       </article>
     </section>`;
     messageContainer.innerHTML += messageHTMLElement;
-  });
+  }); //scroll to the latest message
   messageContainer.scrollTop = messageContainer.scrollHeight;
 }
 function sendMessage() {
@@ -34,6 +37,6 @@ function sendMessage() {
   };
 
   saveChatMessage(newMessage);
-  inputMessage.value = "";
+  inputMessage.value = ""; //clear the input field after sending messages
   loadMeesages();
 }
