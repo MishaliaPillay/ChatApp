@@ -15,13 +15,14 @@
 }
 
 body {
-  overflow: hidden;
-  background-size: 110% 100%;
-  background-repeat: no-repeat;
-
-  background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px,
-    0px 0px;
-
+  font-family: sans-serif;
+  height: 100%;
+  margin: 0;
+  overflow-y: auto;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 0 0;
   background-image: radial-gradient(
       18% 28% at 24% 50%,
       rgb(120, 142, 222) 7%,
