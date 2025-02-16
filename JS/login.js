@@ -10,9 +10,12 @@ function login() {
       "Username does not exist";
     document.getElementById("login-feedback").innerHTML = "";
   } else {
-    //if the user successfullly signs it updates local storage to saythe the user is loggedIn
+    /*if the user successfullly signs it updates session storage
+     to saythe the user is current user-this help to distinguish who is sending messages in chats*/
+
     if (users[username] && users[username].password === password) {
-      localStorage.setItem("loggedInUser", username);
+      sessionStorage.setItem("currentUser", username);
+      addUserToChat(username);
       window.location.href = "general-chat-page.html";
     } else {
       document.getElementById("login-feedback").innerHTML =
@@ -29,3 +32,12 @@ document.getElementById("username").addEventListener("input", function () {
 document.getElementById("password").addEventListener("input", function () {
   document.getElementById("login-feedback").innerHTML = "";
 });
+
+function addUserToChat(username) {
+  let activeUsers = JSON.parse(localStorage.getItem("activeUsers")) || [];
+
+  if (!activeUsers.includes(username)) {
+    activeUsers.push(username);
+    localStorage.setItem("activeUsers", JSON.stringify(activeUsers));
+  }
+}

@@ -1,0 +1,128 @@
+.general-chat-page-card {
+  flex: 1;
+  width: 90%;
+  max-width: 1000px;
+
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin: 5vh auto;
+  background: rgba(255, 255, 255, 0.234);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.542);
+  border-radius: 10px;
+  margin-bottom: 100px;
+}
+.chat-banner {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.chat-input {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.chat-box {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-input button {
+  background: #3b82f6;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 400px);
+  margin-bottom: 10px;
+}
+.sent {
+  align-self: flex-end;
+  background: #3b82f6;
+  color: white;
+
+  border-radius: 15px 15px 0 15px;
+}
+
+.received {
+  align-self: flex-start;
+  background: white;
+  color: black;
+
+  border-radius: 15px 15px 15px 0;
+}
+#online-users {
+  padding: 0 10px;
+  background-color: rgba(208, 224, 238, 0.318);
+  border-radius: 10px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  font-weight: bold;
+  font-size: 12px;
+}
+#online-users h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#users-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+  font-size: 12px;
+}
+.message {
+  max-width: 60%;
+  padding: 10px 15px;
+  font-size: 14px;
+  position: relative;
+  margin: 10px 0;
+  word-wrap: break-word;
+}
+.message-time {
+  font-size: 12px;
+
+  position: absolute;
+  bottom: -15px;
+  right: 10px;
+}
+@media (max-width: 768px) {
+  .general-chat-page-card {
+    width: 75%;
+  }
+  .message {
+    max-width: 75%;
+  }
+}
