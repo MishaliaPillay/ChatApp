@@ -1,5 +1,5 @@
 function loadMeesages() {
-  const messageContainer = document.getElementById("mesages");
+  const messageContainer = document.getElementById("messages");
   messageContainer.innerHTML = "";
 
   const messages = getChatMessage();
@@ -12,7 +12,7 @@ function loadMeesages() {
     const messageHTMLElement = ` <section class="message ${messageClass}">
       <article class="bubble">
         <strong>${messagetext.sender}</strong>${messagetext.text}
-        <span> (${message.texttimestamp})</span>
+        <span> (${messagetext.timestamp}) time</span>
       </article>
     </section>`;
     messageContainer.innerHTML += messageHTMLElement;
@@ -21,7 +21,7 @@ function loadMeesages() {
 }
 function sendMessage() {
   const inputMessage = document.getElementById("message-input");
-  if (inputMessage.ariaValueMax.trim() === "") return;
+  if (inputMessage.value.trim() === "") return;
 
   const currentUser = getCurrentUser();
   if (!currentUser) return;
@@ -30,9 +30,10 @@ function sendMessage() {
   const newMessage = {
     sender: currentUser,
     text: inputMessage.value,
-    timestamp,
+    timestamp: timestamp,
   };
+  console.log(newMessage);
   saveChatMessage(newMessage);
   inputMessage.value = "";
-  loadMeesages;
+  loadMeesages();
 }
