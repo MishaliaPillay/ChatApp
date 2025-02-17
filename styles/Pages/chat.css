@@ -45,7 +45,9 @@
   display: flex;
   flex-direction: column;
 }
-
+#chat-box {
+  margin-left: 10px;
+}
 .chat-input button {
   background: #3b82f6;
   border: none;
@@ -80,9 +82,23 @@
 
   border-radius: 15px 15px 15px 0;
 }
+.sent-message {
+  margin: 0;
+  visibility: hidden;
+}
+.received-message {
+  font-weight: bolder;
+  font-size: 12px;
+  margin: 10px;
+  margin: 20px;
+  margin-bottom: 1px;
+  letter-spacing: 1px;
+  color: rgb(58, 58, 58);
+}
 #online-users {
   padding: 0 10px;
   background-color: rgba(208, 224, 238, 0.318);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
   text-align: center;
   color: rgb(255, 255, 255);
@@ -102,6 +118,7 @@
   padding: 5px;
   margin: 0;
   font-size: 12px;
+  overflow: auto;
 }
 .message {
   max-width: 60%;
@@ -110,19 +127,42 @@
   position: relative;
   margin: 10px 0;
   word-wrap: break-word;
+  margin-top: 0;
 }
 .message-time {
-  font-size: 12px;
+  font-size: 10px;
 
   position: absolute;
-  bottom: -15px;
-  right: 10px;
+  bottom: -25px;
+  right: -10px;
+  margin-bottom: 10px;
+}
+
+.chat-big-container {
+  margin-left: 80px;
 }
 @media (max-width: 768px) {
   .general-chat-page-card {
     width: 75%;
   }
   .message {
-    max-width: 75%;
+    max-width: 70%;
+  }
+  .chat-big-container {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-big-container {
+    margin-left: 60px;
+  }
+  .chat-input input {
+    margin-right: -10px;
+    padding-left: 0;
+  }
+  .chat-input button {
+    padding: 5px 10px;
+    margin-left: 2%;
   }
 }
