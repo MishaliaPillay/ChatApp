@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <header><h1>This is the contacts page</h1></header> 
-</body>
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/Pages/contacts-page.css" />
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header></header>
+    <section class="contacts-page-card">
+      <section class="navbar" id="navbar"></section>
+      <h1 class="general-header">Contacts</h1>
+
+      <section>
+        <article>
+          <label for="search"></label>
+          <input
+            type="search"
+            id="search"
+            class="input-container"
+            placeholder="Search"
+            name="search"
+            required
+          />
+          <ul></ul>
+        </article>
+      </section>
+    </section>
+    <script src="../JS/nav.js"></script>
+  </body>
 </html>
