@@ -12,7 +12,9 @@ function loadMeesages() {
     //was the messagereceived or sent by the current user -apply appropriate styling
     const messageClass =
       messagetext.sender === currentUser ? "sent" : "received";
-    const messageHTMLElement = ` <section class="message ${messageClass}"><strong>${messagetext.sender}</strong>
+    const userClass =
+      messagetext.sender === currentUser ? "sent-message" : "received-message";
+    const messageHTMLElement = ` <strong class="${userClass}">${messagetext.sender}</strong><section class="message ${messageClass}">
       <article class="bubble">
         ${messagetext.text}
         <span class="message-time"> (${messagetext.timestamp})</span>

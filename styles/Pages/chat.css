@@ -82,6 +82,15 @@
 
   border-radius: 15px 15px 15px 0;
 }
+.sent-message {
+  visibility: hidden;
+}
+.received-message {
+  font-size: 10px;
+  margin: 10px;
+  margin: 20px;
+  margin-bottom: 1px;
+}
 #online-users {
   padding: 0 10px;
   background-color: rgba(208, 224, 238, 0.318);
@@ -113,13 +122,15 @@
   position: relative;
   margin: 10px 0;
   word-wrap: break-word;
+  margin-top: 0;
 }
 .message-time {
   font-size: 12px;
 
   position: absolute;
-  bottom: -15px;
-  right: 10px;
+  bottom: -25px;
+  right: 0px;
+  margin-bottom: 10px;
 }
 
 .chat-big-container {
