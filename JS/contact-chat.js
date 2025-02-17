@@ -3,16 +3,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const urlUser = new URLSearchParams(window.location.search);
   const contactChat = urlUser.get("user");
   const currentUser = getCurrentUser();
-  loadMessages();
+
   //i f no user is logged in page redirected
   if (!currentUser || !contactChat) {
     window.location.href = "contacts-page.html";
     return;
   }
-  loadMessages(currentUser, contactChat);
+
   // updates the chat header to show who  user is messaging
   document.getElementById("contact-header").textContent = `${contactChat}`;
-  loadMessages(currentUser.contactChat);
+  loadMessages(currentUser, contactChat);
   //triggers send function
   document.getElementById("send-button").addEventListener("click", () => {
     sendMessage(currentUser, contactChat);
