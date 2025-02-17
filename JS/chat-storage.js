@@ -1,5 +1,8 @@
+//import { readJsonFile, writeToJsonFile } from "./github.js";
+
 function getChatMessage() {
   return JSON.parse(localStorage.getItem("chatMessages")) || [];
+  //return JSON.parse(readJsonFile("messages")) || [];
 }
 function saveChatMessage(message) {
   let messages = getChatMessage();

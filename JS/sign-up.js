@@ -1,3 +1,5 @@
+//import { readJsonFile, writeToJsonFile } from "./github.js";
+
 //onClick call this function
 function signup() {
   const username = document.getElementById("username").value.trim();
