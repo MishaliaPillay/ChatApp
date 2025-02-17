@@ -110,6 +110,9 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+h1 {
+  margin: 0;
+}
 #users-list {
   display: flex;
   gap: 10px;
@@ -119,6 +122,13 @@
   margin: 0;
   font-size: 12px;
   overflow: auto;
+}
+.fa-arrow-left {
+  color: black;
+  float: left;
+}
+a .fa-arrow-left {
+  text-decoration: none;
 }
 .message {
   max-width: 60%;
