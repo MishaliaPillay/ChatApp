@@ -1,14 +1,13 @@
 .contacts-page-card {
-  display: block;
   margin: auto;
   width: 90%;
-  max-width: 600px;
-  text-align: center;
+  max-width: 800px;
+
   padding: 5vh 2vw;
   padding-bottom: 20px;
   display: grid;
   justify-content: center;
-  align-items: center;
+
   margin: 5vh auto;
   background: rgba(255, 255, 255, 0.234);
   -webkit-backdrop-filter: blur(10px);
@@ -16,11 +15,19 @@
   border: 1px solid rgba(255, 255, 255, 0.542);
   border-radius: 10px;
 }
+#contacts-list {
+  gap: 10px;
+  justify-content: center;
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+  font-size: 12px;
+}
 .input-container {
   border-radius: 20px;
   padding: 0.5em 0.3em;
   width: 100%;
-  max-width: 350px;
+  max-width: 40s0px;
   margin: 00;
   font-size: 20px;
   outline: none;
@@ -28,6 +35,27 @@
   cursor: pointer;
 
   letter-spacing: 1px;
+}
+#contacts-list {
+  border-radius: 20px;
+  padding: 10px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 0;
+  font-size: 20px;
+  outline: none;
+  border: 3px solid #9500f1;
+  cursor: pointer;
+  max-height: 400px;
+  letter-spacing: 1px;
+  background: white;
+  margin-top: 20px;
+  overflow-y: scroll;
+  align-items: flex-start;
+}
+#contacts-list li {
+  padding: 20px;
+  border-bottom: 2px solid rgb(200, 195, 195);
 }
 .sign-up {
   color: rgb(255, 255, 255);

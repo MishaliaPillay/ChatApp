@@ -12,7 +12,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
-  <body>
+  <body onload="loadContacts()">
     <header></header>
     <section class="contacts-page-card">
       <section class="navbar" id="navbar"></section>
@@ -29,10 +29,11 @@
             name="search"
             required
           />
-          <ul></ul>
+          <ul id="contacts-list"></ul>
         </article>
       </section>
     </section>
     <script src="../JS/nav.js"></script>
+    <script src="../JS/contacts.js"></script>
   </body>
 </html>
