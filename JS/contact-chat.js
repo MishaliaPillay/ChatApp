@@ -3,13 +3,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const urlUser = new URLSearchParams(window.location.search);
   const contactChat = urlUser.get("user");
   const currentUser = getCurrentUser();
+  loadMessages();
   //i f no user is logged in page redirected
   if (!currentUser || !contactChat) {
     window.location.href = "contacts-page.html";
     return;
   }
-  // updates the chat header to show why user is messaging
-  document.getElementById("chat-header").textContent = `${contactChat}`;
+  loadMessages(currentUser, contactChat);
+  // updates the chat header to show who  user is messaging
+  document.getElementById("contact-header").textContent = `${contactChat}`;
   loadMessages(currentUser.contactChat);
   //triggers send function
   document.getElementById("send-button").addEventListener("click", () => {
@@ -55,14 +57,14 @@ function sendMessage(currentUser, contactChat) {
   //so it doesn't sed empty messages
   if (inputMessage.value.trim() === "") return;
 
-  const timestamp = new Date().toLocaleTimeString([], {
+  const timeStamp = new Date().toLocaleTimeString([], {
     hour: "2-digit",
     minute: "2-digit",
   });
   const newMessage = {
     sender: currentUser,
     text: inputMessage.value,
-    timestamp: timestamp,
+    timeStamp: timeStamp,
   };
   //get the chat history
   let messages =
@@ -80,20 +82,20 @@ function sendMessage(currentUser, contactChat) {
   ); //clear input after sending message
   inputMessage.value = "";
   loadMessages(currentUser, contactChat);
-  localStorage.removeItem(
+  localStorage.removeItem(`typing_${currentUser}`);
+}
+
+function sendTypingIndicator(currentUser, contactChat) {
+  localStorage.setItem(
     `typing_${currentUser}`,
     JSON.stringify({ user: currentUser, isTyping: true })
-  ); //cleare the previous timeout
+  );
   setTimeout(() => {
     localStorage.setItem(
       `typing_${currentUser}`,
       JSON.stringify({ user: currentUser, isTyping: false })
     );
   }, 2000);
-}
-
-function sendTypingIndicator(currentUser, contactChat) {
-  localStorage.setItem(`typing_${currentUser}`);
 }
 function showTyping(contactChat) {
   const typingData = JSON.parse(localStorage.getItem(`typing_${contactChat}`));

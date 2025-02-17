@@ -18,10 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
       //skip the current user- so that they arent shown in their contacts list
       if (username !== currentUser) {
         const li = document.createElement("li");
-        const a = document.createElement("a");
+        const link = document.createElement("a");
         link.textContent = username;
-        link.href;
-        `contact-chat.html?user=${username}`;
+        link.href = `contact-chat.html?user=${username}`;
         li.appendChild(link);
         contactsList.appendChild(li);
       }
