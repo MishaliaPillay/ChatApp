@@ -9,26 +9,37 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="../styles/global.css" />
-    <link rel="stylesheet" href="../styles//Pages/chat.css" />
+    <link rel="stylesheet" href="../styles/Pages/chat.css" />
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <link rel="stylesheet" href="../styles/Pages/typing.css" />
   </head>
   <body>
     <section class="general-chat-page-card">
-      <header>
-        <section class="chat-banner">
-          <a href="./contacts-page.html"> </a><i class="fa fa-arrow-left"></i>
-          <h1 id="contact-header"></h1>
-        </section>
-      </header>
+      <section class="navbar" id="navbar"></section>
+      <section class="chat-big-container">
+        <header>
+          <section class="chat-banner">
+            <a href="./contacts-page.html"><i class="fa fa-arrow-left"></i> </a>
+            <h1 id="contact-header"></h1>
+          </section>
+        </header>
 
-      <section id="chat-box">
-        <article id="messages"></article>
+        <section id="chat-box">
+          <article id="messages"></article>
+        </section>
+
+        <p id="typing-indicator"></p>
+        <article class="chat-input">
+          <input
+            type="text"
+            id="message-input"
+            placeholder="Type something..."
+          />
+          <button id="send-button"><i class="fa fa-send"></i></button>
+        </article>
       </section>
-      <p id="typing-indicator"></p>
-      <article class="chat-input">
-        <input type="text" id="message-input" placeholder="Type something..." />
-        <button id="send-button"><i class="fa fa-send"></i></button>
-      </article>
     </section>
+    <script src="../JS/nav.js"></script>
     <script src="../JS/auth-manager.js"></script>
     <script src="../JS/contact-chat.js"></script>
     <footer></footer>

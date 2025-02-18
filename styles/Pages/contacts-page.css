@@ -1,7 +1,7 @@
 .contacts-page-card {
   margin: auto;
   width: 90%;
-  max-width: 800px;
+  max-width: 1000px;
 
   padding: 5vh 2vw;
   padding-bottom: 20px;
@@ -15,6 +15,32 @@
   border: 1px solid rgba(255, 255, 255, 0.542);
   border-radius: 10px;
 }
+
+::-webkit-scrollbar {
+  border-radius: 10px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #00104100;
+  height: 500px;
+  margin-top: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  height: 80px;
+  border-radius: 20px;
+  background: #020045b7;
+  right: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 #contacts-list {
   gap: 10px;
   justify-content: center;
@@ -36,6 +62,11 @@
 
   letter-spacing: 1px;
 }
+
+.contacts-space {
+  padding: 50px;
+}
+
 #contacts-list {
   border-radius: 20px;
   padding: 10px;

@@ -43,10 +43,17 @@ function loadMessages(currentUser, contactChat) {
     JSON.parse(localStorage.getItem(`chat_${contactChat}_${currentUser}`)) ||
     [];
   //loops  through the messages andthen shows them
-  messages.forEach((element) => {
-    const messageElement = document.createElement("p");
-    messageElement.textContent = `${element.sender}: ${element.text} ${element.timeStamp}`;
-    messageBox.appendChild(messageElement);
+  messages.forEach((messagetext) => {
+    const messageClass =
+      messagetext.sender === currentUser ? "sent" : "received";
+
+    const messageHTMLElement = ` <p class="sent-message">${messagetext.sender}</p><section class="message ${messageClass}">
+    <article class="bubble">
+      ${messagetext.text}
+      <span class="message-time"> ${messagetext.timeStamp}</span>
+    </article>
+  </section>`;
+    messageBox.innerHTML += messageHTMLElement;
   });
   //scroll to latest message
   messageBox.scrollTop = messageBox.scrollHeight;
@@ -102,7 +109,13 @@ function showTyping(contactChat) {
   const typingIndicator = document.getElementById("typing-indicator");
   //if other user is styping show typing..
   if (typingData && typingData.isTyping) {
-    typingIndicator.textContent = `${contactChat} is typing...`;
+    typingIndicator.innerHTML = `  <section class="bubble-container">
+          <div class="typing-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </section>`;
   } else {
     typingIndicator.textContent = "";
   }
