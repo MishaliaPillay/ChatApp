@@ -27,7 +27,13 @@ function handleStorageEvent(event) {
     const typingStatus = document.getElementById("typing");
     //only show typing if somone other than curerent user is typing
     if (typingData.user !== getCurrentUser() && typingData.isTyping) {
-      typingStatus.textContent = `${typingData.user} is typing ...`;
+      typingStatus.innerHTML = `${typingData.user}   <section class="bubble-container">
+          <div class="typing-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </section>`;
     } else {
       typingStatus.textContent = "";
     }

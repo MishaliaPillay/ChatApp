@@ -17,20 +17,23 @@
 }
 
 ::-webkit-scrollbar {
-  border-radius: 5px;
-  width: 10px;
+  border-radius: 10px;
+  width: 5px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   border-radius: 10px;
-  background: #f1f1f1;
+  background: #00104100;
   height: 500px;
+  margin-top: 4px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  height: 80px;
+  border-radius: 20px;
+  background: #020045b7;
+  right: 20px;
 }
 
 /* Handle on hover */

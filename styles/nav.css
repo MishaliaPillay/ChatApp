@@ -19,7 +19,8 @@
   margin: 30% 0;
 }
 .navbar a:hover {
-  background-color: #ddd;
+  border-radius: 5px;
+  background-color: #d98ffe;
   color: white;
 }
 @media (max-width: 768px) {
