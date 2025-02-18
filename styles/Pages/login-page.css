@@ -40,7 +40,6 @@
   font-family: sans-serif;
 }
 
-/*This must be moved to gloabl styles later on*/
 .general-header {
   font-family: sans-serif;
   font-weight: lighter;
@@ -72,21 +71,6 @@ body {
   overflow: hidden;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-
-  background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px,
-    0px 0px;
-
-  background-image: radial-gradient(
-      18% 28% at 24% 50%,
-      rgb(120, 142, 222) 7%,
-      #073aff00 100%
-    ),
-    radial-gradient(70% 53% at 36% 76%, #d98ffe 0%, #073aff00 100%),
-    radial-gradient(42% 53% at 15% 94%, #e930e9ff 7%, #073aff00 100%),
-    radial-gradient(42% 53% at 34% 72%, #a837fb 7%, #073aff00 100%),
-    radial-gradient(35% 56% at 91% 74%, #2542c2f5 9%, #073aff00 100%),
-    radial-gradient(74% 86% at 67% 38%, #e476edff 25%, #073aff00 100%),
-    linear-gradient(125deg, rgb(0, 36, 242) 1%, #4c00fcff 100%);
 }
 
 @media (max-width: 768px) {
