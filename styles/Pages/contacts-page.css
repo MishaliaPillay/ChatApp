@@ -34,6 +34,10 @@
   overflow: hidden;
 }
 
+.contacts-space {
+  padding: 50px;
+}
+
 #contacts-list {
   max-height: 400px;
   overflow-y: auto;
@@ -117,25 +121,30 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
 li a {
   text-decoration: none;
   color: black;
   font-size: 20px;
   margin-left: 10px;
 }
+
 body {
   overflow: hidden;
 }
+
 @media (max-width: 768px) {
   .contacts-page-card {
     margin: 20% auto;
   }
 }
+
 @media (max-width: 480px) {
   .contacts-page-card {
     margin: 20% auto;
   }
 }
+
 .general-header {
   text-align: center;
 }

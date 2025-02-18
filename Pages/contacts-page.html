@@ -17,14 +17,29 @@
     <header></header>
     <section class="contacts-page-card">
       <section class="navbar" id="navbar"></section>
+      <h1 class="general-header">Contacts</h1>
       <section class="contacts-container">
-        <h1 class="general-header">Contacts</h1>
-        <ul id="contacts-list" class="contact-list"></ul>
+        <article>
+          <label for="search"></label>
+          <!-- Uncomment this if you want to have a search input -->
+          <!--
+          <input
+            type="search"
+            id="search"
+            class="input-container"
+            placeholder="Search contacts..."
+            name="search"
+          />
+          -->
+          <section class="contacts-list">
+            <ul class="contacts-space" id="contacts-list"></ul>
+          </section>
+        </article>
       </section>
     </section>
     <script src="../JS/nav.js"></script>
     <script src="../JS/auth-manager.js"></script>
     <script src="../JS/contacts.js"></script>
-    <!--  <script src="../JS/search-contact.js"></script>-->
+    <!-- <script src="../JS/search-contact.js"></script> -->
   </body>
 </html>
