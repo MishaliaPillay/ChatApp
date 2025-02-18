@@ -16,47 +16,52 @@
     <section class="get-started-page-card">
       <h1 class="general-header">Get Started</h1>
       <p class="general-text">Create your account</p>
+      <form id="signup-form">
+        <input
+          type="email"
+          id="email"
+          class="input-container"
+          placeholder="Email"
+          name="email"
+          required
+        />
+        <p id="email-feedback" class="feedback-text"></p>
 
-      <label for="email"></label>
+        <input
+          type="text"
+          id="username"
+          class="input-container"
+          placeholder="Username"
+          name="username"
+          required
+        />
+        <p id="feedback-isUnique" class="feedback-text"></p>
 
-      <input
-        type="email"
-        id="email"
-        class="input-container"
-        placeholder="Email"
-        name="email"
-        required
-      />
+        <input
+          type="password"
+          id="password"
+          class="input-container"
+          placeholder="Password"
+          name="password"
+          required
+        />
+        <p id="password-feedback" class="feedback-text"></p>
 
-      <br />
-      <label for="username"></label>
-      <input
-        type="text"
-        id="username"
-        class="input-container"
-        placeholder="Username"
-        name="username"
-        required
-      />
-      <p id="feedback-isUnique"></p>
-      <br />
-      <label for="password"></label>
-      <input
-        type="password"
-        id="password"
-        class="input-container"
-        placeholder="Password"
-        name="password"
-        required
-      />
-      <br />
-      <a href="./login-page.html" class="sign-up">
-        <i class="fa fa-user-o"
-          ><button class="submit-button" onclick="signup()">
-            Create account
+        <input
+          type="password"
+          id="confirm-password"
+          class="input-container"
+          placeholder="Confirm Password"
+          name="confirm-password"
+          required
+        />
+        <p id="confirm-password-feedback" class="feedback-text"></p>
+        <i class="fa fa-user-o">
+          <button id="submit-button" class="submit-button" type="submit">
+            Create Account
           </button></i
         >
-      </a>
+      </form>
     </section>
   </body>
   <script src="../JS/sign-up.js"></script>
