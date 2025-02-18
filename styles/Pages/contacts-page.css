@@ -1,101 +1,89 @@
 .contacts-page-card {
+  position: relative;
   margin: auto;
   width: 90%;
-  max-width: 800px;
-
+  max-width: 1000px;
   padding: 5vh 2vw;
-  padding-bottom: 20px;
-  display: grid;
-  justify-content: center;
-
-  margin: 5vh auto;
+  display: flex;
+  flex-direction: column; /* Stack elements properly */
   background: rgba(255, 255, 255, 0.234);
-  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.542);
   border-radius: 10px;
+  overflow: hidden;
 }
-#contacts-list {
-  gap: 10px;
-  justify-content: center;
-  list-style: none;
-  padding: 5px;
-  margin: 0;
-  font-size: 12px;
-}
-.input-container {
-  border-radius: 20px;
-  padding: 0.5em 0.3em;
-  width: 100%;
-  max-width: 40s0px;
-  margin: 00;
-  font-size: 20px;
-  outline: none;
-  border: 3px solid #9500f1;
-  cursor: pointer;
 
-  letter-spacing: 1px;
+.navbar {
+  width: 80px;
+  background-color: #6c90eb;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
 }
+
+.contacts-container {
+  flex-grow: 1; /* Ensure it expands properly */
+  padding-left: 100px; /* Space for navbar */
+  overflow: hidden;
+}
+
 #contacts-list {
-  border-radius: 20px;
-  padding: 10px;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 0;
-  font-size: 20px;
-  outline: none;
-  border: 3px solid #9500f1;
-  cursor: pointer;
   max-height: 400px;
-  letter-spacing: 1px;
+  overflow-y: auto;
   background: white;
-  margin-top: 20px;
-  overflow-y: scroll;
-  align-items: flex-start;
-}
-#contacts-list li {
-  padding: 20px;
-  border-bottom: 2px solid rgb(200, 195, 195);
-  text-decoration: none;
-  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+  list-style: none;
 }
 
-li a {
-  width: 900px;
-  text-decoration: none;
-  color: black;
-}
-.sign-up {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-weight: bolder;
-  font-family: sans-serif;
-}
-
-/*This must be moved to gloabl styles later on*/
-.general-header {
-  font-family: sans-serif;
-  font-weight: lighter;
-  font-size: 3.5rem;
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 10px;
+  background: white;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer; /* Indicate it's clickable */
 }
 
-.general-text {
-  font-family: sans-serif;
-  font-size: 1.5rem;
+.contact-item:hover {
+  background: #f0f0f0;
 }
 
-.submit-button {
-  background-color: #718eff;
-  border-radius: 25px;
-  padding: 0.2em;
-  width: 100%;
-  max-width: 400px;
+.contact-avatar {
+  font-size: 30px;
+  color: #6c90eb;
+  margin-right: 15px;
+}
 
-  font-size: 40px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  color: white;
-  letter-spacing: 3px;
-  margin-bottom: 8%;
+.contact-info {
+  flex-grow: 1;
+}
+
+.contact-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.online {
+  background-color: green;
+}
+
+.offline {
+  background-color: red;
 }
