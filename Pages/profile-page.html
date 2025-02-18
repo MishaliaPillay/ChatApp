@@ -28,7 +28,6 @@
 
       <p class="general-text">Your Details</p>
       <article>
-        <label for="email" name></label>
         <!--<i class="fa fa-sign-out"></i>-->
 
         <input
@@ -36,18 +35,12 @@
           id="username"
           class="input-container"
           value="Mishalia Pillay"
-          required
+          readonly
         />
 
         <br />
-        <label for="username"></label>
-        <input
-          type="email"
-          id="email"
-          class="input-container"
-          value="mishalia.pillay@boxfusion.io"
-          readonly
-        />
+
+        <input type="email" id="email" class="input-container" readonly />
         <br />
 
         <button class="submit-button" onclick="logout()">
@@ -58,4 +51,6 @@
   </body>
   <script src="../JS/nav.js"></script>
   <script src="../JS/logout.js"></script>
+  <script src="../JS/profile.js"></script>
+  s
 </html>

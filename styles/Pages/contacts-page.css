@@ -56,6 +56,14 @@
 #contacts-list li {
   padding: 20px;
   border-bottom: 2px solid rgb(200, 195, 195);
+  text-decoration: none;
+  color: black;
+}
+
+li a {
+  width: 900px;
+  text-decoration: none;
+  color: black;
 }
 .sign-up {
   color: rgb(255, 255, 255);
