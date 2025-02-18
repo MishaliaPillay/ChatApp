@@ -5,7 +5,7 @@
   max-width: 1000px;
   padding: 5vh 2vw;
   display: flex;
-  flex-direction: column; /* Stack elements properly */
+  flex-direction: column;
   background: rgba(255, 255, 255, 0.234);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.542);
@@ -29,8 +29,8 @@
 }
 
 .contacts-container {
-  flex-grow: 1; /* Ensure it expands properly */
-  padding-left: 100px; /* Space for navbar */
+  flex-grow: 1;
+  padding-left: 100px;
   overflow: hidden;
 }
 
@@ -56,7 +56,7 @@
   background: white;
   margin-bottom: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  cursor: pointer; /* Indicate it's clickable */
+  cursor: pointer;
 }
 
 .contact-item:hover {
@@ -114,7 +114,6 @@
   right: 20px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
